@@ -12,10 +12,14 @@ interface QuestionPageProps {
 export default function QuestionPage({ word, prevPage, nextPage }: QuestionPageProps) {
   const router = useRouter()
 
-  const handleButtonClick = (choice: string) => {
+  const choice = (choice: string) => {
     // You can store the choice here if needed
     // For example: localStorage.setItem(`choice_${word}`, choice);
     router.push(nextPage)
+  }
+
+  function handleButtonClick(arg0: string): void {
+    throw new Error('Function not implemented.')
   }
 
   return (
